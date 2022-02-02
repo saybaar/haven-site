@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "gh-build": "eleventy",
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve"
   },
