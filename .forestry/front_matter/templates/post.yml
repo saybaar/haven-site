@@ -23,5 +23,10 @@ fields:
     required: false
   label: Tags
   default: post
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
 pages:
 - src/posts/post_one.md
