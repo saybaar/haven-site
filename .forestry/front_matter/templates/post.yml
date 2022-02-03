@@ -29,4 +29,5 @@ fields:
     required: false
   label: Title
 pages:
+- src/posts/a-second-post.md
 - src/posts/post_one.md
