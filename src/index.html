@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 
+<link rel="stylesheet" href="{{ '/tailwind.css' | url }}" />
+
 <head>
     <title>Page title</title>
 </head>
 
 <body>
-    <p>Hello world!</p>
+    <p class="font-sans text-blue-500">Hello world!</p>
     <p>One small step for a monk...</p>
     {% include "postlist.njk" %}
 </body>

@@ -4,13 +4,24 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "gh-build": "eleventy",
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "clean": "rimraf _site",
+    "dev:postcss": "postcss src/tailwind.css -o _site/tailwind.css --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "build:postcss": "NODE_ENV=production postcss src/tailwind.css > _site/tailwind.css",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
+    "dev": "yarn clean && yarn dev:eleventy & yarn dev:postcss",
+    "build": "yarn clean && yarn build:eleventy && yarn build:postcss",
+    "gh-build": "eleventy && yarn build:postcss"
   },
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "markdown-it-footnote": "^3.0.3"
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.16",
+    "markdown-it-footnote": "^3.0.3",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.0.18"
   }
 }
