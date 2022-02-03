@@ -17,3 +17,9 @@ fields:
     time_format: 
     display_utc: false
   default: now
+- name: tags
+  type: text
+  config:
+    required: false
+  label: Tags
+  default: post
