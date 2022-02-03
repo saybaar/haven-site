@@ -1,7 +1,7 @@
 <p>List of posts:</p>
 <ul>
     {% for post in collections.post -%}
-        <li>
+        <li class="text-blue-500">
             <a href="{{ post.url | url }}">{{ post.data.title }}, {{ post.data.date | postDate }}</a>
         </li>
     {% endfor -%}
