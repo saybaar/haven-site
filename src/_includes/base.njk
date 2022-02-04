@@ -1,0 +1,18 @@
+---
+title: Haven's Cool Website
+---
+
+<!doctype html>
+<html>
+
+<link rel="stylesheet" href="{{ '/tailwind.css' | url }}" />
+
+<head>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {{ content | safe }}
+</body>
+
+</html>
