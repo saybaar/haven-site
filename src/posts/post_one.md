@@ -16,7 +16,7 @@ Hello, I am a post!
 
 on {{ date }}
 
-"some fine quotes" and an em-dash---behold
+"some <font color="red">fine</font> quotes" and an em-dash---behold
 
 [^1]: Text of footnote 1
 [^2]: This is another footnote. 
